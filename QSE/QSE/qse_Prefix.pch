@@ -1,0 +1,120 @@
+//
+//  qse_Prefix.pch
+//  QSE
+//
+//  Created by zhouyuxi on 2018/5/28.
+//  Copyright © 2018年 zhouyuxi. All rights reserved.
+//
+
+#ifndef qse_Prefix_h
+#define qse_Prefix_h
+
+
+#endif /* qse_Prefix_h */
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+// pod
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
+#import <SDWebImage/UIImage+GIF.h>
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "MBProgressHUD.h"
+#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
+#import <Bugly/BuglyLog.h>
+#import <ShareSDK/SSDKTypeDefine.h>
+
+// category
+#import "UIImage+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIButton+Extension.h"
+#import "UIView+Extension.h"
+#import "UIViewController+Extension.h"
+#import "UITableView+Extension.h"
+#import "NSMutableAttributedString+Extension.h"
+#import "NSString+Extension.h"
+#import "UIColor+Extension.h"
+#import "NSDate+Extension.h"
+
+// tool
+#import "QSEConfigure.h"
+#import "QSEHttpTool.h"
+#import "Singleton.h"
+#import "QSEBaseController.h"
+#import "ProgressHUD.h"
+#import "QSENavigationController.h"
+#import "QSETabbarController.h"
+
+#endif
+
+
+
+//常用宏定义·
+#define kDeviceWidth [UIScreen mainScreen].bounds.size.width
+#define KDeviceHeight (iPhoneX ? ( [UIScreen mainScreen].bounds.size.height - 54): ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0?[UIScreen mainScreen].bounds.size.height - 20 : [UIScreen mainScreen].bounds.size.height))
+#define RATE kDeviceWidth / 375.0
+#define RATEY (KDeviceHeight / 667.0)
+#define rateX(x) (x*RATE)
+#define rateY(y) (y*RATEY)
+
+#define QSCErrorText @"网络请求失败"
+#define QSCIsExistNetwork @"www.baidu.com"
+#define QSENotNilAndNull(_ref) (((_ref) != nil) && (![(_ref) isKindOfClass:[NSNull class]]))
+
+//颜色
+#define RGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+// 随机色
+#define QSCRandomColor HMColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+/**    从16进制颜色值转换为UIColor */
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define UIColorFromRGBAlpha(rgbValue,alphaNum) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaNum]
+
+#define QSCTextColor RGB(67, 172, 67)
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+#define iOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define iOS9 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+#define iOS71s ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.1)
+
+#define iphone4x_3_5 ([UIScreen mainScreen].bounds.size.height==480.0f)
+
+#define iphone5x_4_0 ([UIScreen mainScreen].bounds.size.height==568.0f)
+
+#define iphone6_4_7 ([UIScreen mainScreen].bounds.size.height==667.0f)
+
+#define iphone6Plus_5_5 ([UIScreen mainScreen].bounds.size.height==736.0f || [UIScreen mainScreen].bounds.size.height==414.0f)
+
+#define kNetworkStatusWiFi ([AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi)
+#define kNetworkStatus3G ([AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWWAN)
+
+#define APPVERSION [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
+#define WINDOW [[[UIApplication sharedApplication] delegate] window]
+
+
+#ifdef DEBUG // 调试状态, 打开LOG功能  pvxdm17jxalwr
+#define MYLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布状态, 关闭LOG功能
+#define MYLog(...)
+
+#endif
+
+
+#if TARGET_IPHONE_SIMULATOR
+#define SIMULATOR 1        // 模拟器
+#elif TARGET_OS_IPHONE
+#define SIMULATOR 0       // 真机
+#endif
+

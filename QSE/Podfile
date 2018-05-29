@@ -1,0 +1,38 @@
+platform :ios, '8.0'
+inhibit_all_warnings!
+#use_frameworks!
+target ‘QSE’ do
+pod 'AFNetworking'
+pod 'SDWebImage' , '~> 3.7.3'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'MBProgressHUD', '~> 0.9.1'
+pod 'Masonry', '~> 0.6.2'
+pod 'NJKWebViewProgress'
+pod 'FDFullscreenPopGesture'
+pod 'RSKImageCropper', '~> 1.2.1'
+pod 'IQKeyboardManager','5.0.6'
+pod 'ShareSDK3', '~> 3.6.3'
+pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
+pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+pod 'UMengAnalytics'
+pod 'AliyunOSSiOS'
+pod 'MLEmojiLabel'
+pod 'Bugly'
+pod 'JPush'
+pod 'HMImagePicker'
+end
+
+
+
+post_install do |installer_representation|
+    installer_representation.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['ARCHS'] = 'armv7 arm64'
+            config.build_settings['ENABLE_BITCODE'] = 'NO'
+        end
+    end
+end
+
+

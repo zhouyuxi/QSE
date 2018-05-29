@@ -1,0 +1,101 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AliyunOSSiOS (2.7.1)
+  - Bugly (2.5.0)
+  - FDFullscreenPopGesture (1.1)
+  - HMImagePicker (1.0.4)
+  - IQKeyboardManager (5.0.6)
+  - JCore (1.1.6)
+  - JPush (3.0.7):
+    - JCore (~> 1.1.6)
+  - Masonry (0.6.4)
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.15.1)
+  - MLEmojiLabel (1.0.2):
+    - TTTAttributedLabel (~> 1.13.4)
+  - MOBFoundation (3.0.6)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
+  - RSKImageCropper (1.2.1)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - ShareSDK3 (3.6.3):
+    - MOBFoundation
+    - ShareSDK3/ShareSDK (= 3.6.3)
+  - ShareSDK3/ShareSDK (3.6.3):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.6.3):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.6.3):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.6.3):
+    - MOBFoundation
+  - TTTAttributedLabel (1.13.4)
+  - UMengAnalytics (4.2.4)
+
+DEPENDENCIES:
+  - AFNetworking
+  - AliyunOSSiOS
+  - Bugly
+  - FDFullscreenPopGesture
+  - HMImagePicker
+  - IQKeyboardManager (= 5.0.6)
+  - JPush
+  - Masonry (~> 0.6.2)
+  - MBProgressHUD (~> 0.9.1)
+  - MJExtension
+  - MJRefresh
+  - MLEmojiLabel
+  - NJKWebViewProgress
+  - RSKImageCropper (~> 1.2.1)
+  - SDWebImage (~> 3.7.3)
+  - ShareSDK3 (~> 3.6.3)
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
+  - ShareSDK3/ShareSDKPlatforms/WeChat
+  - UMengAnalytics
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AliyunOSSiOS: bc161047b15b04eb69ffd2481b73ab4a2275322c
+  Bugly: 00c8701f2bebab4887771ba43afbf51334009742
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  HMImagePicker: 08e16f5ce2634c8290ddefb334368e7a8a6bffd2
+  IQKeyboardManager: 077b7f691dfa9d69db9cff66f2bed68ebfc02d9b
+  JCore: 18fc8725124f26e55625eaf224659b3a999dcf63
+  JPush: 111b79b8a0169ab8fd4c486dac3ed166ed69293e
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  MLEmojiLabel: 36d73c19f9975cbf9def24e5bc135263b0337fd8
+  MOBFoundation: 6f6ec1c2513278551f1a808b5692e983d99e5069
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
+  RSKImageCropper: e912419809d3a4eac47864d6fbc22f84c14879d5
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  ShareSDK3: d271520113160eb24b31cd642b45b38fcd592d93
+  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
+
+PODFILE CHECKSUM: cfddc8dcc13a2b249dff92fd39da59deccb80bb0
+
+COCOAPODS: 1.3.1
